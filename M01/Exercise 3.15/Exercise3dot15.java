@@ -51,7 +51,7 @@ public class Exercise3dot15 {
             }
 
         
-            //WHAT I WAS GOING TO DO BEFORE!!! \/\/\/\/\/ Considered to me ugly and hard to read code
+            //WHAT I WAS GOING TO DO BEFORE!!! \/\/\/\/\/ Considered to me ugly and hard to read <<<<<<<<<<<<<<<<
 
 
         //     if (randomLotteryNumber == luckyNumber) { //if the lottery number is the same as the user's lucky number
