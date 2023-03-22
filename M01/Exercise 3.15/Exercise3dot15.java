@@ -28,20 +28,18 @@ public class Exercise3dot15 {
             int sameDigits = 0; //variable storing the number of same digits in the list
             int maxNumberOfComparableDigits = 3; //variable storing the maximum number of comparable digits
 
-            for (int counter = 0; counter < maxNumberOfComparableDigits; counter++) {
-                int lotteryNumberChange = lotteryNumbersList.get
-                (counter); //variable storing the lottery number
-                if (randomLotteryNumber == luckyNumber) {
+            for (int counter = 0; counter < maxNumberOfComparableDigits; counter++) { //looping through the list
+                if (randomLotteryNumber == luckyNumber) { //if the lottery number is the same as the user's lucky number
                     System.out.println("You win $10,000!!!! Congrats Tech Bro");
                     break;
-                } if (luckyNumbersList.contains(lotteryNumberChange)) {
-                    sameDigits++;
+                } if (luckyNumbersList.contains(lotteryNumbersList.get(counter))) { 
+                    sameDigits++; //if the number is in the list, increase the sameDigits variable by 1
                 }
             }
             
-            if (randomLotteryNumber != luckyNumber) {
-                if (sameDigits == 3) {
-                    System.out.println("You win $3,000!!!! Congrats Medium Lucky Tech Bro");
+            if (randomLotteryNumber != luckyNumber) { //Makes sure not to discount the same order of digits
+                if (sameDigits == 3) { 
+                    System.out.println("You win $3,000!!!! Congrats Medium Lucky Tech Bro"); 
                 }
                 if (sameDigits == 2 || sameDigits == 0) {
                     System.out.println("Sorry you lose Everything!!!! Try Again...rip");
