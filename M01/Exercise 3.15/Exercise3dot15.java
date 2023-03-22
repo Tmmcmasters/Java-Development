@@ -119,8 +119,6 @@ public class Exercise3dot15 {
         
         return lotteryNumbersList; //returning the ArrayList object
 
-
-
         //Another way to do it without creating variables. Save memory!<<<<
 
         // lotteryNumbersList.add(randomLotteryNumber % 10); //Adding the firstLotteryDigit to the ArrayList object
