@@ -5,10 +5,11 @@ public class Exercise3dot15 {
         public static void main(String[] args) { //Declaring main method
             
 
-            Scanner myObj = new Scanner(System.in); //Creating a Scanner object
-            System.out.println("Enter a lucky three digit number(Ex: 123): "); //Prompting the user to enter a lucky three digit number
-            int luckyNumber = myObj.nextInt(); //variable storing the user input
-            passLuckyNumber(luckyNumber); //calling the passLuckyNumber method
+            try (Scanner myObj = new Scanner(System.in)) {
+                System.out.println("Enter a lucky three digit number(Ex: 123): "); //Prompting the user to enter a lucky three digit number
+                int luckyNumber = myObj.nextInt(); //variable storing the user input
+                passLuckyNumber(luckyNumber); //calling the passLuckyNumber method
+            }
 
         }
 
@@ -50,7 +51,9 @@ public class Exercise3dot15 {
             }
 
         
-            //WHAT I WAS GOING TO DO BEFORE!!! \/\/\/\/\/
+            //WHAT I WAS GOING TO DO BEFORE!!! \/\/\/\/\/ Considered to me ugly and hard to read code
+
+
         //     if (randomLotteryNumber == luckyNumber) { //if the lottery number is the same as the user's lucky number
         //         System.out.println("You win $10,000!!!! Congrats Tech Bro"); //outputs the user wins
         // } else if (
@@ -73,6 +76,8 @@ public class Exercise3dot15 {
         // } else {
         //     System.out.println("You lose Everything!!!! Try Again...rip");
         // }
+
+
             //WHAT I WAS GOING TO DO BEFORE!!! /\/\/\/\/\/\/\/\
 
     }
