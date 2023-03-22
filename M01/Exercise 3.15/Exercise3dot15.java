@@ -24,15 +24,17 @@ public class Exercise3dot15 {
 
             System.out.println("Your lucky number is " + luckyNumber); //outputs the lucky number
             System.out.println("The lottery number is " + randomLotteryNumber);
-            
+
             int sameDigits = 0; //variable storing the number of same digits in the list
-            int maxNumberOfComparableDigits = 2; //variable storing the maximum number of comparable digits
+            int maxNumberOfComparableDigits = 3; //variable storing the maximum number of comparable digits
 
             for (int counter = 0; counter < maxNumberOfComparableDigits; counter++) {
+                int lotteryNumberChange = lotteryNumbersList.get
+                (counter); //variable storing the lottery number
                 if (randomLotteryNumber == luckyNumber) {
                     System.out.println("You win $10,000!!!! Congrats Tech Bro");
                     break;
-                } if (luckyNumbersList.contains(lotteryNumbersList.get(counter))) {
+                } if (luckyNumbersList.contains(lotteryNumberChange)) {
                     sameDigits++;
                 }
             }
