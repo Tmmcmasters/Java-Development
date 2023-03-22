@@ -94,12 +94,21 @@ public class Exercise3dot15 {
             luckyNumbersList.add(thirdLuckyDigit); //adding the third number to the ArrayList object
 
             return luckyNumbersList; //returning the ArrayList object
+
+            
+
+            //Another way to do it without creating variables. Save memory! <<<
+
+            // luckyNumbersList.add(luckyNumber % 10); //Adding the firstLuckyDigit to the ArrayList object
+            // luckyNumbersList.add((luckyNumber / 10) % 10); //Adding the secondLuckyDigit to the ArrayList object
+            // luckyNumbersList.add(luckyNumber / 100); //Adding the thirdLuckyDigit to the ArrayList object
+
     }
 
     public static List<Integer> getLotteryNumbers (int randomLotteryNumber) {
         
         int firstLotteryDigit = randomLotteryNumber % 10; //variable storing the first lottery number
-        List<Integer> lotteryNumbersList = new ArrayList<>(); //creating an ArrayList object
+         List<Integer> lotteryNumbersList = new ArrayList<>(); //creating an ArrayList object
         lotteryNumbersList.add(firstLotteryDigit); //adding the first lottery number to the ArrayList object
 
         int secondLotteryDigit = (randomLotteryNumber / 10) % 10; //variable storing the second lottery number
@@ -109,5 +118,14 @@ public class Exercise3dot15 {
         lotteryNumbersList.add(thirdLotteryDigit); //adding the third lottery number to the ArrayList object
         
         return lotteryNumbersList; //returning the ArrayList object
+
+
+
+        //Another way to do it without creating variables. Save memory!<<<<
+
+        // lotteryNumbersList.add(randomLotteryNumber % 10); //Adding the firstLotteryDigit to the ArrayList object
+        // lotteryNumbersList.add((randomLotteryNumber / 10) % 10); //Adding the secondLotteryDigit to the ArrayList object
+        // lotteryNumbersList.add(randomLotteryNumber / 100); //Adding the thirdLotteryDigit to the ArrayList object
+        // return lotteryNumbersList; //returning the ArrayList object
     }
 }
