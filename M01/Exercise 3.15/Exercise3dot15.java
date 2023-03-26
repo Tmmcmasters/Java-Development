@@ -15,8 +15,9 @@ public class Exercise3dot15 {
 
 
         public static void passLuckyNumber(int luckyNumber ) { //Declaring method name that really is passLuckyNumber
-            int randomLotteryNumber = 123; //variable storing a random number between 0 and 999
-
+// ===================IMPORTANT> CHANGE THIS FOR LOTTERY NUMBER==========================================================
+            int randomLotteryNumber = 123; 
+// ==================================================================================================
 
            List<Integer> luckyNumbersList = getLuckyNumbers(luckyNumber); //calling the getLuckyNumbers method and storing the result in a list
 
