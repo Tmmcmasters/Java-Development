@@ -3,14 +3,15 @@ import java.util.Scanner; //Import the Scanner class
 public class exerciseFourDotOne {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the length from the center to a vertex: ");
-        double length = scanner.nextDouble();
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Enter the length from the center to a vertex: ");
+            double length = scanner.nextDouble();
 
-        double pentagonArea = findPentagonArea(length); //calls the method to calculate the area
+            double pentagonArea = findPentagonArea(length); //calls the method to calculate the area
 
 
-        System.out.println("The area of the pentagon is: " + pentagonArea);
+            System.out.println("The area of the pentagon is: " + pentagonArea);
+        }
         
     }
 
