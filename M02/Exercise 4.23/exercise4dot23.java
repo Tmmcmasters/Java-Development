@@ -22,12 +22,16 @@ public class exercise4dot23 {
 
             double grossPay = (hoursWorked * hourlyPayRate);
 
-            System.out.println("Employee's Name: " + employeeName);
+            System.out.println("\nEmployee's Name: " + employeeName);
             System.out.println("Hours Worked: " + hoursWorked);
             System.out.println("Hourly Pay Rate: " + hourlyPayRate);
-            System.out.println("Gross Pay: " + (hoursWorked * hourlyPayRate));
-            System.out.printf("Deductions:");
-            System.out.printf("\nFederal Witholding (" + federalTaxWithholdRate * 100 + "%): " + (grossPay * federalTaxWithholdRate));
+            System.out.println("Gross Pay: $" + (hoursWorked * hourlyPayRate));
+            System.out.println("Deductions:");
+            System.out.println("    Federal Withholding (" + federalTaxWithholdRate * 100 + "%): $" + (grossPay * federalTaxWithholdRate));
+            System.out.println("    State Withholding (" + stateTaxWithholdRate * 100 + "%): $" + (grossPay * stateTaxWithholdRate));
+            System.out.println("    Total Deduction: $" + (grossPay * federalTaxWithholdRate + grossPay * stateTaxWithholdRate));
+            System.out.println("Net Pay: $" + (grossPay - (grossPay * federalTaxWithholdRate + grossPay * stateTaxWithholdRate)));
+            
         }
 
 
