@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// According to this, it required atleast one method and required names of m1 and m2. So, I have not implemented more than two methods. It is not as nice, but still works and passes required parameters. 
 
 public class exercise8dot29 {
     public static void main(String[] args) {
