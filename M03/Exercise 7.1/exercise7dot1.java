@@ -4,12 +4,13 @@ public class exercise7dot1 {
     public static void main(String[] args) { // Main Method
         
         System.out.println("Enter the number of students: "); // Prompt for number of students
-        Scanner studentsInput = new Scanner(System.in); // Create Scanner
-        int students = studentsInput.nextInt(); // Read number of students
+        try (Scanner studentsInput = new Scanner(System.in)) {
+            int students = studentsInput.nextInt(); // Read number of students
 
-        int [] arrayOfScores = getScores(students); // Get scores from user
+            int [] arrayOfScores = getScores(students); // Get scores from user
 
-        printScores(arrayOfScores); // Print scores from user
+            printScores(arrayOfScores); // Print scores from user
+        }
 
     }
 
