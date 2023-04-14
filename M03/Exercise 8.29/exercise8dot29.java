@@ -14,6 +14,7 @@ public class exercise8dot29 {
                     m1[i][j] = input1.nextInt();
                 }
             }
+        
 
             System.out.println("Enter list2: "); // Prompt for list2
             Scanner input2 = new Scanner(System.in);
