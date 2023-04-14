@@ -40,3 +40,6 @@ public abstract class GeometricObject {
   /**Abstract method getPerimeter*/
   public abstract double getPerimeter();
 }
+
+
+

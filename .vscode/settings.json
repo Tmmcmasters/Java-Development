@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
+        "M04/Exercise 9.8",
         "M03/Exercise 8.29",
         "M03/Exercise 7.1",
         "M03/Exercise 6.9",
@@ -9,6 +10,6 @@
         "M01/Exercise 3.15",
         "M01/Exercise 2.3",
         "M01/Exercise 1.5",
-        "M04/Exercise 9.8"
+        "M04/Exercise 11.1"
     ]
 }
