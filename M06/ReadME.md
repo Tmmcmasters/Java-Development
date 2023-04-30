@@ -6,3 +6,10 @@
 futureValue = investmentAmount * (1 + monthlyInterestRate)years*12
 Use text fields for the investment amount, number of years, and annual interest rate. Display the future amount in a text field when the user clicks the Calculate button, as shown in Figure 15.27b.
 # Exercise 19.5
+19.5 (MAXIMUM ELEMENT IN AN ARRAY) Implement the following method that returns the maximum element in an array:
+
+
+public static <E extends Comparable<E>> E max(E[] list)
+
+
+Write a test program that prompts the user to enter 10 integers, invokes this method to find the max, and displays the maximum number.
