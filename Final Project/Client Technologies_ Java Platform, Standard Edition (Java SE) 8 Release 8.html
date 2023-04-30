@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://docs.oracle.com/javase/8/javase-clienttechnologies.htm -->
+<html lang="en" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.truste_caIcon_display {display: inline-block !important;}</style><style type="text/css">.truste_cursor_pointer {cursor: pointer;}.truste_border_none {border: none;}</style><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Client Technologies: Java Platform, Standard Edition (Java SE) 8 Release 8</title>
+<meta name="description" content="Java SE 8 Technical Documentation - Client Technologies">
+
+<meta name="viewport" content="width=device-width">
+
+<link rel="stylesheet" href="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/main.css">
+<link rel="stylesheet" href="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/main-media-480-tablet.css">
+<link rel="stylesheet" href="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/main-media-768-laptop.css">
+<link rel="stylesheet" href="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/main-media-1140-deskp.css">
+
+<link rel="stylesheet" href="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/simpletree.css">
+<link rel="stylesheet" href="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/forms.css">
+<link rel="stylesheet" href="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/panel.css">
+<link rel="stylesheet" href="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/altanav.css">
+<link rel="stylesheet" href="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/docstyles.css">
+
+<link rel="stylesheet" href="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/print.css">
+<link rel="stylesheet" href="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/home.css">
+<link rel="stylesheet" href="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/normalize.min.css">    
+
+        
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="assets/css/ltIE9.css">
+<![endif]-->         
+        
+<script type="text/javascript" async="" src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/infinity_common.js.download"></script><script src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/cb=gapi.loaded_1" async=""></script><script src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/cb=gapi(1).loaded_0" async=""></script><script type="text/javascript" async="" src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/plusone.js.download" gapi_processed="true"></script><script id="twitter-wjs" src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/widgets.js.download"></script><script src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/jquery-1.6.2.js.download"></script>
+<script src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/modernizr-2.6.1-respond-1.1.0.min.js.download"></script>
+
+<!--toggle search-->
+<script src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/toggle.search.js.download" type="text/javascript"></script>
+<!--navigation main-->
+<script src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/altanav.js.download" type="text/javascript"></script> 
+<!--custom tag element-->
+<script src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/customhtmltags.js.download" type="text/javascript"></script> 
+
+<!--project specific head data-->
+  
+<!-- Function for printing -->  
+<script>
+function PrintPage()
+  {window.print();}
+</script>
+
+<script>
+  $(window).unload(function() {
+  });
+</script>
+
+<!-- keep select menu's sticking when hit back button-->
+<script>
+$(window).load(function () {
+    $("select").each(function () {
+        $(this).val($(this).find('option[selected]').val());
+    });
+});
+</script>
+
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script><script src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/global.js.download"></script><style>@font-face {
+              font-family: 'Open Sans Regular';
+              font-style: normal;
+              font-weight: 400;
+              src: url('chrome-extension://gkkdmjjodidppndkbkhhknakbeflbomf/fonts/open_sans/open-sans-v18-latin-regular.woff');
+          }</style><style>@font-face {
+              font-family: 'Open Sans Bold';
+              font-style: normal;
+              font-weight: 800;
+              src: url('chrome-extension://gkkdmjjodidppndkbkhhknakbeflbomf/fonts/open_sans/open-sans-v18-latin-800.woff');
+          }</style><script charset="utf-8" src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/button.e7f9415a2e000feaab02c86dd5802747.js.download"></script><style id="banner_footer_style" type="text/css">#footer-banner ul li:nth-child(2) {  margin-left: 0;}#footer-banner {  z-index: 9999;  position: fixed;  margin: 0 auto 0 auto;  bottom: 0; left: 0; right: 0;  background-color: #EBEBEB !important;  border-top: 1px solid #ACB7BF;  color: #1958AA;  padding: 0.0em 1em;  text-align: center;  font-size: 12px !important;  line-height: 15px;  font-weight: normal;  font-family: Arial;  clear: both;}#teconsent {  display: inline-block;}#footer-banner ul {  list-style: none;  font-size: 12px !important;  padding: 0;  margin: 0;  margin-right: 20px;}#footer-banner li {  display: inline-block;}#footer-banner li + li:before {  content: "|";  margin-right: 4px;  margin-left: 4px;  color: #aaa;}#footer-banner a {  color: #1958AA;  text-decoration: none;  font-size: 12px !important;}#footer-banner a:focus, #footer-banner a:hover {  color: #1958AA;  text-decoration: underline;}</style><script type="text/javascript" src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/odc.js.download"></script><script type="text/javascript" src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/analytics-production.js.download" async="true" defer="true"></script><script type="text/javascript" src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/common.js.download" async="true" defer="true"></script><script type="text/javascript" src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/analytics.js.download" async="true" defer="true"></script></head>
+
+<body data-new-gr-c-s-check-loaded="14.1028.0" data-gr-ext-installed="">
+<!--[if lt IE 7]>
+<div style="border-bottom: 1px solid #A3A481; background-color: #FFFFDC; padding: 10px; font: normal 13px/16px Arial, sans-serif;">
+<strong>You are running an older version of Internet Explorer or running Internet Explorer in compatibility mode.</strong>  For a richer experience, please upgrade to the latest <a href="http://windows.microsoft.com/en-US/internet-explorer/downloads/ie" target="_blank">Internet Explorer</a> version, or use <a href="http://www.google.com/chrome/" target="_blank">Chrome</a>, <a href="http://www.mozilla.com/en-US/firefox/" target="_blank">Firefox</a>, or <a href="http://www.apple.com/safari/" target="_blank">Safari</a>.
+</div>
+<![endif]--> 
+
+<div id="altlogo">Oracle | Hardware and Software, Engineered to Work Together</div>
+
+<span id="top"></span>
+
+<div class="header-container">
+<header class="wrapper clearfix">
+
+
+<div id="brandProdName">
+<div id="logocover"></div>
+<div id="productName">Documentation</div>
+</div> 
+
+<div id="signInArea"><p>Looking for a different release? <a href="https://docs.oracle.com/en/java/javase/">Other releases</a></p>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+$("#signInArea").load("version.html");
+});
+</script>
+
+
+<!--div id="searchheader">
+<form action="pg-results.php" method="get"><label for="search">Search</label>
+ <input id="search" name="search" type="search" /><input class="gobutton" name="submit"  type="button" value="GO" /></form>
+</div-->
+<div id="searchheader">
+<a href="https://docs.oracle.com/javase/search.html" class="button">Search Java SE Documentation</a>
+</div>
+
+<!-- Main Navigation -->
+<br class="clearfloat">
+ <div id="navBar" class="io">
+
+<!--
+<ul>
+<li><a class="menu1" title="Home" href="pg-home.php"><span>Home</span></a></li>
+<li><a class="menu2" title="What's New"><span>What's New</span><span class="dropdown-arrow"></span></a></li>
+<li><a class="menu3" title="All Books" href="pg-allbooks-infotype.php"><span>All Books</span></a></li>
+</ul>
+-->
+</div>
+            <br class="clearfloat">
+<!--         
+<div id="navcontainer" >
+<div class="submenu2 shadow" ><h3>See What's New in <strong>SE</strong> Documentation</h3>
+</div>
+
+</div> -->
+            <br class="clearfloat">
+<!-- End Main Navigation -->
+
+
+</header>
+</div>
+
+<div class="main-container">
+<div class="main wrapper clearfix">
+
+<div id="breadcrumb">
+
+</div>
+<div class="bookoptions"><a href="mailto:javasedocs_us@oracle.com" title="Send Feedback">Send Feedback</a> | <a href="https://docs.oracle.com/javase/8/javase-clienttechnologies.htm#" onclick="PrintPage();">Print</a></div>
+
+<h1 class="pagetitle">Java Platform, Standard Edition (Java SE) 8</h1>
+
+<div id="linksubmenu">
+<ul>
+<li><a href="https://docs.oracle.com/javase/8/index.html">Home</a></li>
+<li class="tabselected"><a href="https://docs.oracle.com/javase/8/javase-clienttechnologies.htm">Client Technologies</a></li>
+<li><a href="https://docs.oracle.com/javase/8/javase-embedded.htm">Embedded</a></li>
+<li><a href="https://docs.oracle.com/javase/8/javase-books.htm">All Books</a></li>
+
+</ul>
+</div>
+<div class="contentarea clearboth">
+
+<div class="threecolumns">
+
+<div class="JavaList">
+
+
+   <h2>JavaFX</h2>
+   <ul>
+      <li>Getting Started with JavaFX
+      <ul>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXST784">What Is JavaFX</a></li>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXST804">Get Started with JavaFX</a></li>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXST788">Get Acquainted with JavaFX Architecture</a></li>
+         <li><a href="https://docs.oracle.com/javase/8/docs/technotes/guides/deploy">Deployment Guide</a></li>
+      </ul>
+      </li>
+      <li>Graphics
+      <ul>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXGR256">Getting Started with JavaFX 3D Graphics</a></li>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXGR238">Use the Image Ops API</a></li>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXGR214">Work with Canvas</a></li>
+      </ul>
+      </li>
+      <li>User Interface Components
+      <ul>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXUI336">Work with UI Controls</a></li>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXUI577">Create Charts</a></li>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXUI734">Add Text</a></li>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXWV135">Add HTML Content</a></li>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXLY">Work with Layouts</a></li>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXUI733">Skin Applications with CSS</a></li>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXMG137">Build UI with FXML</a></li>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXED117">Handle Events</a></li>
+      </ul>
+      </li>
+      <li>Effects, Animation, and Media
+      <ul>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXTE191">Create Visual Effects</a></li>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXTE139">Add 2D &amp; 3D Transformations</a></li>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXTE149">Add Transitions &amp; Animation</a></li>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXMD101">Incorporate Media</a></li>
+      </ul>
+      </li>
+      <li>Application Logic
+      <ul>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXSG107">Work with the Scene Graph</a></li>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXBD107">Use Properties and Binding</a></li>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXCL107">Work with Collections</a></li>
+      </ul>
+      </li>
+      <li>Interoperability
+      <ul>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXIP546">Use Concurrency and Threads</a></li>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXIP561">Integrate JavaFX and Swing</a></li>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXIP101">Integrate JavaFX and SWT</a></li>
+      </ul>
+      </li>
+      <li>Reference
+      <ul>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JFXAP">JavaFX API Documentation</a></li>
+         <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/doc-files/cssref.html">CSS Reference Guide</a></li>
+         <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/fxml/doc-files/introduction_to_fxml.html">Introduction to FXML</a></li>
+   </ul>
+   </li>
+   </ul>
+</div>
+</div>
+
+<div class="threecolumns">
+<div class="JavaList">
+   <h2>Swing and 2D</h2>
+   <ul>
+      <li><a href="https://docs.oracle.com/javase/tutorial/uiswing/start/index.html">Getting Started with Swing</a></li>
+      <li><a href="https://docs.oracle.com/javase/tutorial/uiswing/components/index.html">Use Swing Components</a></li>
+      <li><a href="https://docs.oracle.com/javase/tutorial/uiswing/concurrency/index.html">Use Concurrency in Swing</a></li>
+      <li><a href="https://docs.oracle.com/javase/tutorial/uiswing/misc/index.html">Work with Advanced Swing Features</a></li>
+      <li><a href="https://docs.oracle.com/javase/tutorial/uiswing/layout/index.html">Lay Out Components Within a Container</a></li>
+      <li><a href="https://docs.oracle.com/javase/tutorial/uiswing/lookandfeel/index.html">Modify the Look and Feel</a></li>
+      <li><a href="https://docs.oracle.com/javase/tutorial/uiswing/dnd/index.html">Drag and Drop</a></li>
+      <li><a href="https://docs.oracle.com/javase/tutorial/uiswing/events/index.html">Write Event Listeners</a></li>
+      <li><a href="https://docs.oracle.com/javase/tutorial/uiswing/painting/index.html">Perform Custom Painting</a></li>
+      <li><a href="https://docs.oracle.com/javase/tutorial/2d/overview/index.html">Overview of the Java 2D Graphics API</a></li>
+      <li><a href="https://docs.oracle.com/javase/tutorial/2d/basic2d/index.html">Get Started with Graphics</a></li>
+      <li><a href="https://docs.oracle.com/javase/tutorial/2d/geometry/index.html">Work with Geometry</a></li>
+      <li><a href="https://docs.oracle.com/javase/tutorial/2d/text/index.html">Work with Text APIs</a></li>
+      <li><a href="https://docs.oracle.com/javase/tutorial/2d/images/index.html">Work with Images</a></li>
+      <li><a href="https://docs.oracle.com/javase/tutorial/2d/printing/index.html">Print Graphics</a></li>
+      <li><a href="https://docs.oracle.com/javase/tutorial/2d/advanced/index.html">Learn Advanced Topics in Java 2D</a>
+   </li>
+   </ul>
+</div>
+</div>
+
+<div class="threecolumns">
+<div class="JavaList">
+   <h2>JavaFX Scene Builder 2</h2>
+   <ul>
+      <li>Getting Started with Scene Builder
+      <ul>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JSBGS164">Scene Builder Overview</a></li>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JSBGS101">Get Started with Scene Builder</a></li>
+      </ul>
+      </li>
+      <li>Working with Scene Builder
+      <ul>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JSBRG">Design UI with Scene Builder</a></li>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JSBID">Use Scene Builder with Java IDEs</a></li>
+      </ul>
+      </li>
+      <li>Release Documentation
+      <ul>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JSBIG">Install Scene Builder</a></li>
+         <li><a href="http://www.oracle.com/pls/topic/lookup?ctx=javase80&amp;id=JSBRN">Release Notes</a></li>
+   </ul>
+   </li>
+   </ul>
+</div>
+
+</div>
+
+
+<br class="clearfloat">
+
+<br class="clearfloat">
+</div><!--end rightbody-->
+
+<div class="contentarea2 clearboth">
+<div id="footerbox">
+
+<div class="threecolumns">
+
+<ul>
+<li><a href="http://www.oracle.com/technetwork/index.html" target="_blank">Oracle Technology Network</a></li>
+<li><a href="http://www.oracle.com/technetwork/java/javase/overview/index.html" target="_blank">Java SE on OTN</a></li>
+<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">Java SE Downloads</a></li>
+<li><a href="http://www.oracle.com/technetwork/java/javaseproducts/overview/index.html" target="_blank">Java SE Advanced and Java SE Suite</a></li></ul>
+
+</div><!--end-->
+   
+<div class="threecolumns">
+
+<ul>
+<li><a href="https://education.oracle.com/java_training/" target="_blank">Java Training</a></li>
+<li><a href="https://community.oracle.com/community/java" target="_blank">Java Forums</a></li>
+<li><a href="https://blogs.oracle.com/java/" target="_blank">Java Source blog</a></li>
+<li><a href="https://blogs.oracle.com/thejavatutorials/" target="_blank">Java Tutorials blog</a></li></ul>
+
+</div><!--end-->
+   
+<div class="threecolumns">
+
+<ul>
+<li><a href="https://docs.oracle.com/javaee/" target="_blank">Java EE Documentation</a></li>
+<li><a href="https://docs.oracle.com/javame/" target="_blank">Java ME Documentation</a></li>
+<li><a href="https://docs.oracle.com/javadb/" target="_blank">Java DB Documentation</a></li>
+<li><a href="https://docs.oracle.com/javacomponents/" target="_blank">Java Components Documentation</a></li>
+<li><a href="https://docs.oracle.com/javacard/" target="_blank">Java Card Documentation</a></li></ul>
+
+
+</div><!--end-->
+
+<br class="clearfloat">
+<span class="clearfloat"></span>
+
+</div><!--end footerbox-->
+
+
+</div> <!-- .contentarea -->
+</div><!-- .main -->
+</div><!-- .main-container -->
+<div class="main wrapper">
+
+<div class="socialicons">
+<a href="https://www.facebook.com/ilovejava" target="_blank"><img src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/f_spacer.gif" alt="Facebook" class="socialIcon facebook"></a>
+
+
+<a href="https://www.twitter.com/java" target="_blank"><img src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/f_spacer.gif" alt="Twitter" class="socialIcon twitter"></a>
+
+
+<a href="http://blogs.oracle.com/thejavatutorials/feed/entries/rss" target="_blank"><img src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/f_spacer.gif" alt="RSS Feeds" class="socialIcon rss"></a>
+
+
+<!--
+<a href="https://www.facebook.com/ilovejava" target="_blank"><img src="assets/img-common/f_spacer.gif" alt="Facebook" class="socialIcon facebook" /></a> 
+<a href="https://www.twitter.com/java" target="_blank"><img src="assets/img-common/f_spacer.gif" alt="Twitter" class="socialIcon twitter" /></a> 
+<a href="http://blogs.oracle.com/thejavatutorials/feed/entries/rss" target="_blank"><img src="assets/img-common/f_spacer.gif" alt="RSS Feeds" class="socialIcon rss" /></a>
+-->
+</div>
+<div class="SocialBar">
+
+
+<div id="tw-like">
+<!-- from:twitter:https://twitter.com/about/resources/buttons#tweet -->
+<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 73px; height: 20px;" title="Twitter Tweet Button" src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/tweet_button.2b2d73daf636805223fb11d48f3e94f7.en.html"></iframe>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div>
+
+
+
+<div id="go-like">
+<!-- https://developers.google.com/+/web/+1button/ -->
+
+<!-- Place this tag where you want the +1 button to render. -->
+<div id="___plusone_0" style="position: absolute; width: 450px; left: -10000px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" tabindex="0" vspace="0" width="100%" id="I0_1682342660170" name="I0_1682342660170" src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/fastbutton.html" data-gapiattached="true"></iframe></div><div class="g-plusone" data-size="medium" data-annotation="none" data-gapiscan="true" data-onload="true" data-gapistub="true"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+</div>
+
+
+
+
+<!--<div id="fb-like">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/OracleCloudComputing" data-width="450" data-layout="button_count" data-show-faces="false" data-send="true"></div>
+</div>-->
+
+
+</div>
+</div>
+
+
+
+<div class="footer-container">
+ <footer>
+	<span style="display:block;">Copyright © 2016, Oracle and/or its affiliates. All rights reserved. <a href="https://docs.oracle.com/javase/8/assets/cpyr.htm">Legal Notices</a></span>
+ </footer>
+</div>
+
+       <br>
+
+        <!--<script src="assets/js/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="assets/js/jquery-1.8.0.min.js"><\/script>')</script>-->
+
+
+<!-- Start SiteCatalyst code -->
+<script type="application/javascript" src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/ora_docs.js.download"></script><script src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/ora_code_docs.js.download"></script><script src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/ora_code.js.download"></script>
+<!-- End SiteCatalyst code -->
+
+
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/widget_iframe.2b2d73daf636805223fb11d48f3e94f7.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe name="oauth2relay1338475361" id="oauth2relay1338475361" src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/postmessageRelay.html" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/saved_resource.html"></iframe><div id="footer-banner" style="display: inline-block;"><ul><li><div id="teconsent" consent="undefined" aria-label="Open Cookie Preferences Modal" class="truste_caIcon_display" role="complementary"><script async="async" type="text/javascript" crossorigin="" importance="high" src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/v1.7-164"></script><a role="link" id="icon-id06701764055746755" tabindex="0" lang="en" aria-haspopup="true" aria-label="Cookie Preferences" class="truste_cursor_pointer">Cookie Preferences</a></div></li><li><a id="adchoices" class="new-window" target="_blank" href="https://www.oracle.com/legal/privacy/marketing-cloud-data-cloud-privacy-policy.html#12">Ad Choices</a></li></ul></div><script type="text/javascript" src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/notice" id="truste_0.5085001678358074"></script><iframe name="trustarc_notice" id="trustarcNoticeFrame" title="Trustarc Cross-Domain Consent Frame" src="./Client Technologies_ Java Platform, Standard Edition (Java SE) 8 Release 8_files/get.html" style="display: none;"></iframe></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+  div.grammarly-desktop-integration {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+  }
+
+  div.grammarly-desktop-integration:before {
+    content: attr(data-content);
+  }
+</style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

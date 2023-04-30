@@ -17,7 +17,7 @@ import java.sql.Statement;
 public class RegisterController {
 
 @FXML
-private Button closeButton;
+Button closeButton;
 @FXML
 private Label registerMessageLabel;
 @FXML

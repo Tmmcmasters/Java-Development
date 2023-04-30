@@ -1,14 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
-
+<AnchorPane prefHeight="500.0" prefWidth="520.0" style="-fx-background-color: #900C3F;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalproject.RegisterController">
+   <children>
+      <AnchorPane prefHeight="82.0" prefWidth="520.0" style="-fx-background-color: #581845;">
+         <effect>
+            <DropShadow height="54.35" radius="13.0875" width="0.0" />
+         </effect>
+         <children>
+            <ImageView fx:id="logoImageView" fitHeight="72.0" fitWidth="76.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Logo/mixrDotPartyLOGO_digital_art_x4_toned-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="187.0" layoutY="24.0" text="User Registration" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Dubai Medium" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="143.0" layoutY="148.0" text="First Name" textFill="WHITE">
+         <font>
+            <Font name="Dubai Medium" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstNameTextField" layoutX="233.0" layoutY="149.0" promptText="First Name" />
+      <Label layoutX="143.0" layoutY="191.0" text="Last Name" textFill="WHITE">
+         <font>
+            <Font name="Dubai Medium" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lastNameTextField" layoutX="233.0" layoutY="193.0" promptText="Last Name" />
+      <Label layoutX="145.0" layoutY="240.0" text="Username" textFill="WHITE">
+         <font>
+            <Font name="Dubai Medium" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameTextField" layoutX="233.0" layoutY="242.0" promptText="Username" />
+      <Label layoutX="148.0" layoutY="282.0" text="Password" textFill="WHITE">
+         <font>
+            <Font name="Dubai Medium" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="99.0" layoutY="325.0" text="Confirm Password" textFill="WHITE">
+         <font>
+            <Font name="Dubai Medium" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="registerButton" layoutX="95.0" layoutY="399.0" mnemonicParsing="false" onAction="#registerButtonAction" prefHeight="28.0" prefWidth="188.0" style="-fx-background-color: #91FF2B;" text="Confirm">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="closeButton" layoutX="308.0" layoutY="399.0" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="28.0" prefWidth="80.0" style="-fx-background-color: #FF2020;" text="Cancel">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="passwordPasswordField" layoutX="233.0" layoutY="284.0" promptText="Password" />
+      <PasswordField fx:id="confirmPasswordPasswordField" layoutX="233.0" layoutY="327.0" promptText="Confirm Password" />
+      <Label fx:id="registerMessageLabel" layoutX="99.0" layoutY="352.0" prefHeight="44.0" prefWidth="287.0" textFill="#ffdcdc">
+         <font>
+            <Font name="Dubai Medium" size="22.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+   </children>
 </AnchorPane>

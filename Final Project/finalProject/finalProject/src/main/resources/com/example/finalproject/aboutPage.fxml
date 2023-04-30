@@ -119,7 +119,7 @@
          <center>
             <BorderPane fx:id="mainPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <center>
-                  <Label prefHeight="359.0" prefWidth="476.0" text="TEST EVENTS PAGE" wrapText="true" BorderPane.alignment="CENTER">
+                  <Label prefHeight="359.0" prefWidth="476.0" text="TEST About PAGE" wrapText="true" BorderPane.alignment="CENTER">
                      <font>
                         <Font size="47.0" />
                      </font>

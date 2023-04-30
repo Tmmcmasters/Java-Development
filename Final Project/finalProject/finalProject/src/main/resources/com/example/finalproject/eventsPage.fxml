@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -116,7 +117,14 @@
             </AnchorPane>
          </left>
          <center>
-            <BorderPane fx:id="mainPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            <BorderPane fx:id="mainPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <center>
+                  <Label prefHeight="359.0" prefWidth="476.0" text="TEST EVENTS PAGE" wrapText="true" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="47.0" />
+                     </font>
+                  </Label>
+               </center></BorderPane>
          </center>
       </BorderPane>
    </children>
