@@ -1,131 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalproject.DashboardController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <BorderPane layoutY="14.0" prefHeight="200.0" prefWidth="718.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-12.0">
-         <left>
-            <AnchorPane prefHeight="400.0" prefWidth="173.0" BorderPane.alignment="CENTER">
-               <children>
-                  <VBox fx:id="anchorSliderPanel" alignment="BASELINE_LEFT" layoutX="1.0" layoutY="56.0" prefHeight="344.0" prefWidth="173.0" style="-fx-background-color: #900C3F;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-                     <children>
-                        <JFXButton fx:id="eventsPageButton" alignment="BASELINE_LEFT" onAction="#handleEventsPageButtonAction" prefHeight="35.0" prefWidth="184.0" text="Events" textFill="WHITE">
-                           <font>
-                              <Font name="Dubai Bold" size="16.0" />
-                           </font>
-                           <graphic>
-                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@Images/Events.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </JFXButton>
-                        <JFXButton fx:id="profilePageButton" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="10.0" onAction="#handleProfilePageButtonAction" prefHeight="35.0" prefWidth="184.0" text="Profile" textFill="WHITE">
-                           <font>
-                              <Font name="Dubai Bold" size="16.0" />
-                           </font>
-                           <graphic>
-                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@Images/Profile.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </JFXButton>
-                        <JFXButton fx:id="registerEventPageButton" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="49.0" onAction="#handleRegisterEventPageButtonAction" prefHeight="35.0" prefWidth="184.0" text="Register Event" textFill="WHITE">
-                           <font>
-                              <Font name="Dubai Bold" size="16.0" />
-                           </font>
-                           <graphic>
-                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@Images/Register_Event.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </JFXButton>
-                        <JFXButton fx:id="aboutPageButton" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="88.0" onAction="#handleAboutPageButtonAction" prefHeight="35.0" prefWidth="184.0" text="About" textFill="WHITE">
-                           <font>
-                              <Font name="Dubai Bold" size="16.0" />
-                           </font>
-                           <graphic>
-                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@Images/About.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </JFXButton>
-                        <JFXButton fx:id="exitPageButton" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="145.0" onAction="#handleExitPageButtonAction" prefHeight="35.0" prefWidth="184.0" text="Exit" textFill="WHITE">
-                           <font>
-                              <Font name="Dubai Bold" size="16.0" />
-                           </font>
-                           <graphic>
-                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@Images/Exit.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </JFXButton>
-                     </children>
-                  </VBox>
-                  <ImageView fx:id="backLogo" fitHeight="59.0" fitWidth="60.0" layoutX="1.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Logo/mixrDotPartyLOGO_digital_art_x4_toned-removebg-preview.png" />
-                     </image>
-                  </ImageView>
-                  <JFXButton fx:id="backMenu" alignment="BASELINE_LEFT" layoutX="47.0" layoutY="9.0" prefHeight="39.0" prefWidth="96.0" text="Menu">
-                     <font>
-                        <Font name="Dubai Bold" size="16.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/Menu.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </JFXButton>
-                  <ImageView fx:id="frontLogo" fitHeight="59.0" fitWidth="60.0" layoutX="2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Logo/mixrDotPartyLOGO_digital_art_x4_toned-removebg-preview.png" />
-                     </image>
-                  </ImageView>
-                  <JFXButton fx:id="frontMenu" alignment="BASELINE_LEFT" layoutX="48.0" layoutY="8.0" prefHeight="39.0" prefWidth="96.0" text="Menu">
-                     <font>
-                        <Font name="Dubai Bold" size="16.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/Menu.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </JFXButton>
-               </children>
-            </AnchorPane>
-         </left>
-         <center>
-            <BorderPane fx:id="mainPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-               <center>
-                  <Label prefHeight="359.0" prefWidth="476.0" text="TEST About PAGE" wrapText="true" BorderPane.alignment="CENTER">
-                     <font>
-                        <Font size="47.0" />
-                     </font>
-                  </Label>
-               </center></BorderPane>
-         </center>
-      </BorderPane>
+      <Text layoutX="35.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="eventsPage" wrappingWidth="153.13671875" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="53.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
