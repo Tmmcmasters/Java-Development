@@ -11,16 +11,20 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import com.jfoenix.controls.JFXButton;
 import javafx.util.Duration;
 import org.w3c.dom.events.MouseEvent;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class DashboardController implements Initializable {
 
@@ -50,6 +54,8 @@ public class DashboardController implements Initializable {
     private JFXButton exitPageButton;
     @FXML
     private Pane mainPane;
+    @FXML
+    private BorderPane paneToLoadPages;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -58,19 +64,50 @@ public class DashboardController implements Initializable {
     }
 
     public void handleEventsPageButtonAction(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("eventsPage.fxml"));
+
+        loadPage("eventsPage");
+
+       // FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("eventsPage.fxml"));
     }
     public void handleProfilePageButtonAction(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("profilePage.fxml"));
+
+        loadPage("profilePage");
+
+
     }
     public void handleRegisterEventPageButtonAction(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("registerEventsPage.fxml"));
+
+        loadPage("registerEventsPage");
+
     }
     public void handleAboutPageButtonAction(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("aboutPage.fxml"));
+
+        loadPage("aboutPage");
+
     }
     public void handleExitPageButtonAction(ActionEvent event) throws IOException {
-        System.exit(0);
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Exit Application");
+        alert.setHeaderText("Are you sure you want to exit?");
+        alert.setContentText("Press OK to exit, or Cancel to stay.");
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.isPresent() && result.get() == ButtonType.OK) {
+            System.exit(0);
+        }
+    }
+
+    private void loadPage (String pageName) throws IOException {
+        Parent root = null;
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(pageName + ".fxml"));
+            root = fxmlLoader.load();
+        } catch (IOException e) {
+            Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, e);
+        }
+
+        paneToLoadPages.setCenter(root);
     }
 
 //    @Override

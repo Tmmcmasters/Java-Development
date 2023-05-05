@@ -70,7 +70,7 @@ public class LoginController {
                     loginMessageLabel.visibleProperty().setValue(true);
                     loginMessageLabel.setText("Welcome " + username);
                     try {
-                        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("daskboard.fxml")));
+                        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("dashboard.fxml")));
                         Stage dashboardStage = new Stage();
 
                        // dashboardStage.initStyle(StageStyle.UNDECORATED);
