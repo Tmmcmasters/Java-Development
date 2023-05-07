@@ -1,2 +1,4 @@
-package com.example.finalproject;public class ProfilePageController {
+package com.example.finalproject;
+
+public class ProfilePageController {
 }

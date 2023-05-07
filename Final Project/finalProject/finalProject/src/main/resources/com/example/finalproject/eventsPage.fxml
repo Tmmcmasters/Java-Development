@@ -10,18 +10,18 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalproject.EventsPageController">
    <children>
-      <StackPane layoutX="100.0" layoutY="48.0" prefHeight="285.0" prefWidth="200.0">
+      <StackPane layoutX="100.0" layoutY="44.0" prefHeight="285.0" prefWidth="200.0">
          <children>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightgreen; -fx-background-radius: 15;">
+            <AnchorPane fx:id="anchorPaneToSwipe" onMouseDragged="#handleMouseDragged" onMousePressed="#handleMousePressed" onMouseReleased="#handleMouseReleased" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightgreen; -fx-background-radius: 15;">
                <children>
-                  <ImageView fitHeight="285.0" fitWidth="200.0" pickOnBounds="true">
+                  <ImageView fx:id="imageForEventImageView" fitHeight="285.0" fitWidth="200.0" pickOnBounds="true">
                      <image>
                         <Image url="@Images/testForBackground1.jpg" />
                      </image>
                   </ImageView>
-                  <Text fill="RED" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spots Available">
+                  <Text fx:id="spotsAvailableText" fill="RED" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spots Available">
                      <effect>
                         <DropShadow />
                      </effect>
@@ -29,7 +29,7 @@
                         <Font name="Dubai Medium" size="14.0" />
                      </font>
                   </Text>
-                  <Text fill="#00ff11" layoutX="138.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cost" textAlignment="RIGHT" wrappingWidth="47.619140625">
+                  <Text fx:id="costText" fill="#00ff11" layoutX="138.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cost" textAlignment="RIGHT" wrappingWidth="47.619140625">
                      <effect>
                         <DropShadow />
                      </effect>
@@ -37,7 +37,7 @@
                         <Font name="Dubai Regular" size="14.0" />
                      </font>
                   </Text>
-                  <Text layoutX="14.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Title">
+                  <Text fx:id="eventTitleText" layoutX="14.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Title">
                      <font>
                         <Font name="Dubai Medium" size="21.0" />
                      </font>
@@ -45,7 +45,7 @@
                         <DropShadow />
                      </effect>
                   </Text>
-                  <Text fill="#ff7300" layoutX="14.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Organization Name">
+                  <Text fx:id="orgNameText" fill="#ff7300" layoutX="14.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Organization Name">
                      <font>
                         <Font name="Dubai Medium" size="13.0" />
                      </font>
@@ -59,7 +59,7 @@
                   </Text>
                   <Pane layoutY="196.0" prefHeight="83.0" prefWidth="200.0">
                      <children>
-                        <Text layoutX="8.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LONG description to view the description and stuff and yes! I am so happy!" wrappingWidth="184.0">
+                        <Text fx:id="descriptionOfEventText" layoutX="8.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LONG description to view the description and stuff and yes! I am so happy!" wrappingWidth="184.0">
                            <effect>
                               <DropShadow height="1.0" radius="0.0" width="1.0" />
                            </effect>

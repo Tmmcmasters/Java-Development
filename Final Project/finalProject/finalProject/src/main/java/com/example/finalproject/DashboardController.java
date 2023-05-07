@@ -37,8 +37,8 @@ public class DashboardController implements Initializable {
     @FXML
     private JFXButton backMenu;
 
-    @FXML
-    private ImageView frontLogo;
+//    @FXML
+//    private ImageView frontLogo;
 
     @FXML
     private JFXButton frontMenu;
@@ -59,8 +59,8 @@ public class DashboardController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        frontLogo.setVisible(false);
-        frontMenu.setVisible(false);
+        //frontLogo.setVisible(false);
+       //e frontMenu.setVisible(false);
     }
 
     public void handleEventsPageButtonAction(ActionEvent event) throws IOException {
@@ -97,18 +97,37 @@ public class DashboardController implements Initializable {
         }
     }
 
-    private void loadPage (String pageName) throws IOException {
+    private void loadPage(String pageName) throws IOException {
         Parent root = null;
 
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(pageName + ".fxml"));
             root = fxmlLoader.load();
+
+            // Get the controller for the loaded FXML file
+            Object controller = fxmlLoader.getController();
+
+            // Perform any controller-specific initialization, if necessary
+            if (controller instanceof EventsPageController) {
+                // Initialize the events page controller
+                EventsPageController eventsPageController = (EventsPageController) controller;
+                // eventsPageController.initialize(...);
+                eventsPageController.customInitialization();
+
+            } else if (controller instanceof ProfilePageController) {
+                // Initialize the profile page controller
+                ProfilePageController profilePageController = (ProfilePageController) controller;
+                // profilePageController.initialize(...);
+            }
+            // Add more cases for other controllers as needed
+
         } catch (IOException e) {
             Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, e);
         }
 
         paneToLoadPages.setCenter(root);
     }
+
 
 //    @Override
 //    public void initialize(URL url, ResourceBundle resourceBundle) {
