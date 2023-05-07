@@ -17,6 +17,8 @@ import java.io.IOException;
 
 public class Exercise extends Application {
 
+    private File selectedFile;
+
     @Override
     public void start(Stage primaryStage) {
         VBox root = new VBox(10);
@@ -29,9 +31,8 @@ public class Exercise extends Application {
         Button submitButton = new Button("Submit");
 
         FileChooser fileChooser = new FileChooser();
-        chooseFileButton.setOnAction(e -> fileChooser.showOpenDialog(primaryStage));
+        chooseFileButton.setOnAction(e -> selectedFile = fileChooser.showOpenDialog(primaryStage));
         submitButton.setOnAction(e -> {
-            File selectedFile = fileChooser.showOpenDialog(primaryStage);
             int numFiles = Integer.parseInt(numFilesField.getText());
             try {
                 splitFile(selectedFile, numFiles);
