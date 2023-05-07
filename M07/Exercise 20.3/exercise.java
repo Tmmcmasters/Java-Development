@@ -4,7 +4,7 @@ import java.util.stream.Collectors;
 public class exercise {
     public static void main(String[] args) {
 
-        Map<String, String> stateCapitals = new LinkedHashMap<String, String>() {{
+        Map<String, String> stateCapitals = new LinkedHashMap<String, String>() {{ // Create a map of all states and their capitals
             put("Alabama", "Montgomery");
             put("Alaska", "Juneau");
             put("Arizona", "Phoenix");
@@ -59,21 +59,21 @@ public class exercise {
         
 
         // Shuffle the states
-        List<String> states = new ArrayList<>(stateCapitals.keySet());
-        Collections.shuffle(states);
+        List<String> states = new ArrayList<>(stateCapitals.keySet()); // Create a list
+        Collections.shuffle(states); // Shuffle the list
 
-        Scanner input = new Scanner(System.in);
-        int correctCount = 0;
+        Scanner input = new Scanner(System.in); // Create a scanner
+        int correctCount = 0; // Initialize the correct count
 
-        for (String state : states) {
-            System.out.print("What is the capital of " + state + "? ");
-            String s = input.nextLine();
-
-            if (s.equalsIgnoreCase(stateCapitals.get(state))) {
-                System.out.println("Your answer is correct!");
+        for (String state : states) { // For each state
+            System.out.print("What is the capital of " + state + "? "); // Ask the user
+            String s = input.nextLine(); // Read the answer
+ 
+            if (s.equalsIgnoreCase(stateCapitals.get(state))) { // If the answer is correct
+                System.out.println("Your answer is correct!");  // If the answer is correct
                 correctCount++;
             } else {
-                System.out.println("WRONG - The correct answer is " + stateCapitals.get(state));
+                System.out.println("WRONG - The correct answer is " + stateCapitals.get(state));  // If the answer is wrong
             }
         }
 
